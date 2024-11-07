@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regla de Proximidad: Guía para Seleccionar el Instrumento Más Apropiado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 2rem;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .intro {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .criteria-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .criteria-table th, .criteria-table td {
+            border: 1px solid #ccc;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .criteria-table th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .step {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 0.75rem 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        .input-field:focus {
+            border-color: #3498db;
+        }
+
+        .button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        .scale-info {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .scale-info ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .scale-info ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.9rem;
+            display: none;
+            margin-top: 0.5rem;
+        }
+
+        .result-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        .result-table th, .result-table td {
+            border: 1px solid #ccc;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .result-table th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-3xl font-bold">Regla de Proximidad: Guía para Seleccionar el Instrumento Más Apropiado</h1>
+        <div class="intro">
+            <p>La regla de proximidad es una metodología diseñada para ayudar a seleccionar el instrumento de medición más adecuado en función de varios criterios clave que permiten una evaluación precisa de la adecuación de un instrumento a un contexto particular. Estos criterios incluyen la proximidad temática, proximidad poblacional, el idioma del instrumento, la calidad de los indicadores psicométricos, la longitud del instrumento, y la fecha de creación y validación. A continuación, se presenta una tabla con los criterios y su ponderación para ayudarle a entender cómo evaluar cada uno de estos aspectos.</p>
+
+            <p><em>Los criterios y ponderaciones son sugeridos. La intención general se orienta a promover la toma de decisiones estructurada acerca de los instrumentos de medición a utilizar.</em></p>
+            <p><em>Por Orlando Scoppetta PhD</em></p>
+        </div>
+
+        <table class="criteria-table">
+            <thead>
+                <tr>
+                    <th>Criterio</th>
+                    <th>Ponderación</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Proximidad Temática</td>
+                    <td>20%</td>
+                    <td>El instrumento debe estar alineado específicamente con el tema o constructo que se desea medir, asegurando que las preguntas y áreas cubiertas sean directamente relevantes. Califique con cinco (5) si el instrumento mide explícitamente el constructo que usted quiere medir.</td>
+                </tr>
+                <tr>
+                    <td>Proximidad Poblacional - País</td>
+                    <td>15%</td>
+                    <td>El instrumento fue creado o validado recientemente en el mismo país en el que va a utilizarse. Califique con cinco (5) si el instrumento fue creado o validado recientemente en el país en el que usted quiere aplicarlo.</td>
+                </tr>
+                <tr>
+                    <td>Proximidad Poblacional - Grupo de Edad</td>
+                    <td>10%</td>
+                    <td>El instrumento fue creado o validado recientemente en el mismo grupo de edad al que usted quiere aplicarlo. Califique con cinco (5) si el instrumento fue creado o validado recientemente en el grupo de edad que desea estudiar.</td>
+                </tr>
+                <tr>
+                    <td>Idioma</td>
+                    <td>15%</td>
+                    <td>El instrumento fue creado o validado recientemente en el idioma de la población objetivo. Califique con cinco (5) si el instrumento fue creado o validado recientemente en el idioma en el que usted quiere aplicarlo.</td>
+                </tr>
+                <tr>
+                    <td>Indicadores Psicométricos</td>
+                    <td>20%</td>
+                    <td>El instrumento debe tener indicadores sólidos de consistencia interna y validez, análisis factorial confirmatorio o análisis tipo IRT, entre otros, que respalden su uso con confianza.</td>
+                </tr>
+                <tr>
+                    <td>Longitud del Instrumento</td>
+                    <td>10%</td>
+                    <td>Número de preguntas o ítems que el participante debe responder. La extensión del instrumento debe ser adecuada, teniendo en cuenta el balance entre la profundidad de la medición y el tiempo que lleva completarlo para evitar la fatiga en los encuestados. Califique con cinco (5) al instrumento más corto.</td>
+                </tr>
+                <tr>
+                    <td>Fecha de Creación y Validación</td>
+                    <td>10%</td>
+                    <td>El instrumento debe haber sido creado y validado recientemente o haber sido revisado en los últimos años para asegurar su relevancia y actualización a las nuevas realidades del contexto. Califique con cinco (5) al instrumento de más reciente creación o validación.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="scale-info">
+            <h3 class="text-xl font-bold">Califique cada aspecto del instrumento de acuerdo con la siguiente escala:</h3>
+            <ul>
+                <li>5 = Ajuste total</li>
+                <li>4 = Ajuste en alto grado</li>
+                <li>3 = Ajuste parcial</li>
+                <li>2 = Ajuste débil</li>
+                <li>1 = Ajuste muy débil</li>
+            </ul>
+        </div>
+
+        <div id="step1" class="step">
+            <h2 class="text-xl font-bold">Paso 1: Indique el constructo</h2>
+            <input type="text" id="constructInput" class="input-field" placeholder="Ej: Inteligencia Emocional" required>
+            <div class="error-message" id="constructError">Por favor, ingresa el constructo a medir.</div>
+            <div class="button-group">
+                <button class="button" onclick="goToStep2()">Continuar</button>
+            </div>
+        </div>
+
+        <div id="step2" class="step" style="display: none;">
+            <h2 class="text-xl font-bold">Paso 2: Evaluar Instrumentos</h2>
+            <div id="instrumentSection"></div>
+            <div class="button-group">
+                <button class="button" onclick="addInstrument()">Agregar Instrumento</button>
+                <button class="button" onclick="finalizeEvaluation()">Finalizar Evaluación</button>
+            </div>
+        </div>
+
+        <table id="resultTable" class="result-table" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Instrumento</th>
+                    <th>Pertinencia Temática</th>
+                    <th>Indicadores Psicométricos</th>
+                    <th>Proximidad Poblacional - País</th>
+                    <th>Proximidad Poblacional - Grupo de Edad</th>
+                    <th>Idioma</th>
+                    <th>Longitud del Instrumento</th>
+                    <th>Fecha de Creación y Validación</th>
+                    <th>Puntuación Total (%)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script>
+        let currentInstrument = 1;
+
+        function goToStep2() {
+            const construct = document.getElementById('constructInput').value.trim();
+            const constructError = document.getElementById('constructError');
+
+            if (!construct) {
+                constructError.style.display = 'block';
+                return;
+            }
+            constructError.style.display = 'none';
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'block';
+        }
+
+        function addInstrument() {
+            const instrumentSection = document.getElementById('instrumentSection');
+            const div = document.createElement('div');
+            div.className = 'instrument instrument-info mb-6';
+            div.innerHTML = `
+                <h3 class="text-xl font-bold mb-4">Instrumento ${currentInstrument}</h3>
+                <input type="text" placeholder="Nombre del instrumento" id="name${currentInstrument}" class="input-field" required><br>
+                <label class="block font-medium mb-2"><strong>Pertinencia Temática (20%) (1-5):</strong></label>
+                <p class="mb-2">El instrumento debe estar alineado específicamente con el tema o constructo que se desea medir, asegurando que las preguntas y áreas cubiertas sean directamente relevantes. Califique con cinco (5) si el instrumento mide explícitamente el constructo que usted quiere medir.</p>
+                <input type="number" id="pertinencia${currentInstrument}" class="input-field" min="1" max="5" required oninput="validateInput(this)"><br>
+                <label class="block font-medium mb-2"><strong>Indicadores Psicométricos (20%) (1-5):</strong></label>
+                <p class="mb-2">El instrumento debe tener indicadores sólidos de consistencia interna y validez, análisis factorial confirmatorio o análisis tipo IRT, entre otros, que respalden su uso con confianza.</p>
+                <input type="number" id="psicometrico${currentInstrument}" class="input-field" min="1" max="5" required oninput="validateInput(this)"><br>
+                <h4 class="text-lg font-bold mb-2">Proximidad Poblacional (25%)</h4>
+                <label class="block font-medium mb-2"><strong>País (15%) (1-5):</strong></label>
+                <p class="mb-2">El instrumento fue creado o validado recientemente en el mismo país en el que va a utilizarse (por ejemplo, fue creado en Colombia y va a usarse en Colombia). Califique con cinco (5) si el instrumento fue creado o validado recientemente en el país en el que usted quiere aplicarlo.</p>
+                <input type="number" id="pais${currentInstrument}" class="input-field" min="1" max="5" required oninput="validateInput(this)"><br>
+                <label class="block font-medium mb-2"><strong>Grupo de Edad (10%) (1-5):</strong></label>
+                <p class="mb-2">El instrumento fue creado o validado recientemente en el mismo grupo de edad al que usted quiere aplicarlo (por ejemplo, fue creado para adolescentes y usted quiere aplicarlo a adolescentes). Califique con cinco (5) si el instrumento fue creado o validado recientemente en el grupo de edad que desea estudiar.</p>
+                <input type="number" id="edad${currentInstrument}" class="input-field" min="1" max="5" required oninput="validateInput(this)"><br>
+                <label class="block font-medium mb-2"><strong>Idioma (15%) (1-5):</strong></label>
+                <p class="mb-2">El instrumento fue creado o validado recientemente en el idioma de la población a la cual usted quiere aplicarlo. Califique con cinco (5) si el instrumento fue creado o validado recientemente en idioma en el que usted quiere aplicarlo.</p>
+                <input type="number" id="idioma${currentInstrument}" class="input-field" min="1" max="5" required oninput="validateInput(this)"><br>
+                <label class="block font-medium mb-2"><strong>Longitud del Instrumento (10%) (1-5):</strong></label>
+                <p class="mb-2">Número de preguntas, reactivos o ítems que el participante debe responder. La extensión del instrumento debe ser adecuada, teniendo en cuenta el balance entre la profundidad de la medición y el tiempo que lleva completarlo para evitar la fatiga en los encuestados. Califique con cinco (5) al instrumento más corto.</p>
+                <input type="number" id="longitud${currentInstrument}" class="input-field" min="1" max="5" required oninput="validateInput(this)"><br>
+                <label class="block font-medium mb-2"><strong>Fecha de Creación y Validación (10%) (1-5):</strong></label>
+                <p class="mb-2">El instrumento debe haber sido creado y validado recientemente o haber sido revisado en los últimos años para asegurar su relevancia y actualización a las nuevas realidades del contexto. Califique con cinco (5) al instrumento de más reciente creación o validación.</p>
+                <input type="number" id="fecha${currentInstrument}" class="input-field" min="1" max="5" required oninput="validateInput(this)"><br>
+                <div id="error-message-${currentInstrument}" class="error-message">Solo puede introducir valores entre 1 y 5.</div>
+            `;
+            instrumentSection.appendChild(div);
+            currentInstrument++;
+        }
+
+        function validateInput(input) {
+            const value = parseInt(input.value);
+            if (value < 1 || value > 5) {
+                input.value = "";
+                const errorMessage = document.getElementById(`error-message-${input.id.match(/\d+/)[0]}`);
+                errorMessage.style.display = 'block';
+            } else {
+                const errorMessage = document.getElementById(`error-message-${input.id.match(/\d+/)[0]}`);
+                errorMessage.style.display = 'none';
+            }
+        }
+
+        function finalizeEvaluation() {
+            const tbody = document.getElementById('resultTable').getElementsByTagName('tbody')[0];
+            tbody.innerHTML = "";
+
+            for (let i = 1; i < currentInstrument; i++) {
+                const name = document.getElementById(`name${i}`).value.trim();
+                if (!name) continue;
+
+                const pertinencia = parseInt(document.getElementById(`pertinencia${i}`).value);
+                const psicometrico = parseInt(document.getElementById(`psicometrico${i}`).value);
+                const pais = parseInt(document.getElementById(`pais${i}`).value);
+                const edad = parseInt(document.getElementById(`edad${i}`).value);
+                const idioma = parseInt(document.getElementById(`idioma${i}`).value);
+                const longitud = parseInt(document.getElementById(`longitud${i}`).value);
+                const fecha = parseInt(document.getElementById(`fecha${i}`).value);
+
+                const total = (pertinencia * 0.20) + (psicometrico * 0.20) + (pais * 0.15) + (edad * 0.10) + (idioma * 0.15) + (longitud * 0.10) + (fecha * 0.10);
+
+                const row = tbody.insertRow();
+                row.insertCell(0).textContent = name;
+                row.insertCell(1).textContent = pertinencia;
+                row.insertCell(2).textContent = psicometrico;
+                row.insertCell(3).textContent = pais;
+                row.insertCell(4).textContent = edad;
+                row.insertCell(5).textContent = idioma;
+                row.insertCell(6).textContent = longitud;
+                row.insertCell(7).textContent = fecha;
+                row.insertCell(8).textContent = (total * 20).toFixed(2) + " %";
+            }
+
+            document.getElementById('resultTable').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
